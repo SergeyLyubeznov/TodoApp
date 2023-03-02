@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-zC-Eof" customClass="ActivityIndicatorView" customModule="TestShopFirebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bAD-ma-4ph">
+                    <rect key="frame" x="27.666666666666671" y="27.666666666666671" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Blo-L4-BM9"/>
+                        <constraint firstAttribute="height" constant="20" id="QLN-XH-cGH"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="0hV-H1-78e"/>
+            <color key="backgroundColor" red="0.61835349641545201" green="0.62554365335051543" blue="0.62554365335051543" alpha="0.69980335884353739" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="bAD-ma-4ph" firstAttribute="centerX" secondItem="eT3-zC-Eof" secondAttribute="centerX" id="2sD-jc-bal"/>
+                <constraint firstAttribute="width" constant="75" id="JFT-vK-LNQ"/>
+                <constraint firstAttribute="height" constant="75" id="JtQ-3O-mFL"/>
+                <constraint firstItem="bAD-ma-4ph" firstAttribute="centerY" secondItem="eT3-zC-Eof" secondAttribute="centerY" id="wHv-KY-0nN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityView" destination="bAD-ma-4ph" id="jkZ-Zr-UQx"/>
+            </connections>
+            <point key="canvasLocation" x="-132" y="-129"/>
+        </view>
+    </objects>
+</document>
