@@ -221,6 +221,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="eFj-Se-RDP" id="Hat-bt-G6h"/>
+                        <outlet property="loginButton" destination="Qa4-sM-NhT" id="l0H-O4-CW9"/>
                         <outlet property="passwordTextField" destination="ctd-bG-Gjd" id="b1M-sq-3w1"/>
                     </connections>
                 </viewController>
@@ -420,6 +421,7 @@
                         <outlet property="confirmPasswordTextField" destination="D9J-Ok-LOY" id="161-CB-8VS"/>
                         <outlet property="emailTextField" destination="D1z-sA-poo" id="o5z-Ru-CLx"/>
                         <outlet property="passwordTextField" destination="T6g-Az-mV1" id="VGa-VD-1ct"/>
+                        <outlet property="signUpButton" destination="9ed-FN-cXE" id="3YF-Rp-Yzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7a-5h-Jcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

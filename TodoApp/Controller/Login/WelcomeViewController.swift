@@ -18,20 +18,11 @@ class WelcomeViewController: BaseViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction private func loginButtonPressed() {
-//        let controller = LoginViewController.instantiate()
-//        let viewModel = LoginViewModel(networkService: LoginNetworkService())
-//        controller.setViewModel(viewModel)
-//        self.present(controller, animated: true)
         coordintator?(.login)
     }
     
     @IBAction private func signUpButtonPressed() {
-//        let controller = SignUpViewController.instantiate()
-//        let viewModel = SignUpViewModel(networkService: LoginNetworkService())
-//        controller.setViewModel(viewModel)
-//        self.present(controller, animated: true)
         coordintator?(.signUp)
     }
 }

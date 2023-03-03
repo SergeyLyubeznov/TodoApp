@@ -53,8 +53,8 @@ class TasksViewController: BaseViewController, Storyboarded {
     }
     
     // MARK: - Combine
-    
     private func setupSiblings() {
+        
         viewModel?.$success
             .sink { [weak self] _ in
                 self?.tableView.reloadData()
@@ -70,12 +70,12 @@ class TasksViewController: BaseViewController, Storyboarded {
                 }
             }
             .store(in: &cancellableSet)
+        
         viewModel?.update()
         viewModel?.getTasks()
     }
     
     // MARK: - Actions
-    
     @IBAction func addButtonPressed() {
         viewModel?.addTask()
     }
@@ -86,7 +86,6 @@ class TasksViewController: BaseViewController, Storyboarded {
 }
 
 // MARK: - UITableViewDataSource
-
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.tasks.count ?? 0
@@ -102,7 +101,6 @@ extension TasksViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-
 extension TasksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {

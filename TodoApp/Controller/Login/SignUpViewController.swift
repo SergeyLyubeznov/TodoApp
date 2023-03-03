@@ -13,10 +13,12 @@ class SignUpViewController: BaseViewController {
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var confirmPasswordTextField: UITextField!
+    @IBOutlet private var signUpButton: UIButton!
     
     var coordintator: ((LoginCoordinator.Destination) -> Void)?
     
     private var viewModel: LoginViewModel?
+    private var validationViewModel = SignUpValidationViewModel()
     private var cancellableSet: Set<AnyCancellable> = []
     lazy private var activityView = {ActivityIndicatorView.instantiate()}()
     
@@ -24,6 +26,7 @@ class SignUpViewController: BaseViewController {
         super.viewDidLoad()
 
         setupSiblings()
+        setupValidationSiblings()
         setupActivityIndicator()
     }
     
@@ -42,21 +45,43 @@ class SignUpViewController: BaseViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction private func signUpButtonPressed() {
-        let email = emailTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
-        let confirmPassword = confirmPasswordTextField.text ?? ""
+        let email = validationViewModel.email//emailTextField.text ?? ""
+        let password = validationViewModel.password//passwordTextField.text ?? ""
+        let confirmPassword = validationViewModel.confirmPassword//.text ?? ""
         viewModel?.signUp(email: email, password: password, confirmPassword: confirmPassword)
     }
     
     @IBAction private func closeButtonPressed() {
         coordintator?(.close)
     }
+}
+
+// MARK: - Combine
+extension SignUpViewController {
     
-    // MARK: - Combine
+    private func setupValidationSiblings() {
+        
+        emailTextField.textPublisher
+            .assign(to: \.email, on: validationViewModel)
+            .store(in: &cancellableSet)
+        
+        passwordTextField.textPublisher
+            .assign(to: \.password, on: validationViewModel)
+            .store(in: &cancellableSet)
+        
+        confirmPasswordTextField.textPublisher
+            .assign(to: \.confirmPassword, on: validationViewModel)
+            .store(in: &cancellableSet)
+        
+        validationViewModel.$isValid
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isEnabled, on: signUpButton)
+            .store(in: &cancellableSet)
+    }
     
     private func setupSiblings() {
+        
         viewModel?.$success
             .sink { [weak self] success in
                 if success {

@@ -11,7 +11,6 @@ struct Constants {
     private init() {}
     
     // MARK: - Api
-    
     struct Api {
         static let Host = "http://127.0.0.1:8080"
         static let Tasks = "tasks"
@@ -20,7 +19,6 @@ struct Constants {
     }
     
     // MARK: - Colors
-    
     struct Colors {
         static let TaskHightPriority = "C92E27"
         static let TaskMidPriority = "515283"
@@ -28,9 +26,14 @@ struct Constants {
     }
     
     // MARK: - Storyboard
-    
     struct Storyboard {
         static let Login = "Login"
         static let Main = "Main"
+    }
+    
+    // MARK: - Validators
+    struct Valid {
+        static let PasswordLenght = 8
+        static let EmailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     }
 }

@@ -50,6 +50,9 @@
 		CCAF374429AD53A20077EEB4 /* ApiRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374029AD53A20077EEB4 /* ApiRoute.swift */; };
 		CCAF374629AD53B50077EEB4 /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374529AD53B50077EEB4 /* TasksService.swift */; };
 		CCAF374A29AD54800077EEB4 /* TaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374929AD54800077EEB4 /* TaskAPI.swift */; };
+		CCEC73E229B19F5500F16BF1 /* UITextField + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E129B19F5500F16BF1 /* UITextField + Utils.swift */; };
+		CCEC73E429B1A16D00F16BF1 /* LoginValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E329B1A16D00F16BF1 /* LoginValidationViewModel.swift */; };
+		CCEC73E629B1A23500F16BF1 /* SignUpValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E529B1A23500F16BF1 /* SignUpValidationViewModel.swift */; };
 		CCEF93E229AD7BE0005B32E6 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF93E129AD7BE0005B32E6 /* TasksViewModel.swift */; };
 		CCEF93E629AD8243005B32E6 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEF93E429AD8243005B32E6 /* ActivityIndicatorView.xib */; };
 		CCEF93E729AD8243005B32E6 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF93E529AD8243005B32E6 /* ActivityIndicatorView.swift */; };
@@ -125,6 +128,9 @@
 		CCAF374029AD53A20077EEB4 /* ApiRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRoute.swift; sourceTree = "<group>"; };
 		CCAF374529AD53B50077EEB4 /* TasksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
 		CCAF374929AD54800077EEB4 /* TaskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAPI.swift; sourceTree = "<group>"; };
+		CCEC73E129B19F5500F16BF1 /* UITextField + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + Utils.swift"; sourceTree = "<group>"; };
+		CCEC73E329B1A16D00F16BF1 /* LoginValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationViewModel.swift; sourceTree = "<group>"; };
+		CCEC73E529B1A23500F16BF1 /* SignUpValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpValidationViewModel.swift; sourceTree = "<group>"; };
 		CCEF93E129AD7BE0005B32E6 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		CCEF93E429AD8243005B32E6 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		CCEF93E529AD8243005B32E6 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		CC0118F829AEE659002C64DA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CCEC73E729B1A53C00F16BF1 /* Validation */,
 				CC0118F929AEE665002C64DA /* LoginViewModel.swift */,
 			);
 			path = Login;
@@ -396,6 +403,7 @@
 		CC11E5CE29AD43370000DDE8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CCEC73E129B19F5500F16BF1 /* UITextField + Utils.swift */,
 				CCEF93F129AD8CAB005B32E6 /* UIColor + Utils.swift */,
 				CCEF93F629AD963F005B32E6 /* String + Utils.swift */,
 				CCEF93E829AD827E005B32E6 /* UIVIew + Utils.swift */,
@@ -424,9 +432,26 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		CCEC73DE29B1941A00F16BF1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CCEC73E729B1A53C00F16BF1 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC73E529B1A23500F16BF1 /* SignUpValidationViewModel.swift */,
+				CCEC73E329B1A16D00F16BF1 /* LoginValidationViewModel.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		CCEF93E029AD7BCE005B32E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CCEC73DE29B1941A00F16BF1 /* SignUp */,
 				CC0118F829AEE659002C64DA /* Login */,
 				CCEF93E129AD7BE0005B32E6 /* TasksViewModel.swift */,
 				CCEF93EA29AD83C9005B32E6 /* TaskViewModel.swift */,
@@ -630,6 +655,7 @@
 				CCAF374229AD53A20077EEB4 /* NetworkService.swift in Sources */,
 				CC01192129B0067C002C64DA /* MainCoordinator.swift in Sources */,
 				CCAF374429AD53A20077EEB4 /* ApiRoute.swift in Sources */,
+				CCEC73E229B19F5500F16BF1 /* UITextField + Utils.swift in Sources */,
 				CC01190929AEE958002C64DA /* UserAPI.swift in Sources */,
 				CCEF93F729AD963F005B32E6 /* String + Utils.swift in Sources */,
 				CC01190429AEE89C002C64DA /* AuthResponse.swift in Sources */,
@@ -642,6 +668,7 @@
 				CC0118FA29AEE665002C64DA /* LoginViewModel.swift in Sources */,
 				CC01192529B012EE002C64DA /* BaseViewController.swift in Sources */,
 				CC01191D29AFED19002C64DA /* AppCoordinator.swift in Sources */,
+				CCEC73E429B1A16D00F16BF1 /* LoginValidationViewModel.swift in Sources */,
 				CC0118E929AE7CB0002C64DA /* CoreDataService.swift in Sources */,
 				CC0118F129AED35A002C64DA /* WelcomeViewController.swift in Sources */,
 				CCEF93F529AD947A005B32E6 /* BaseNavigationController.swift in Sources */,
@@ -667,6 +694,7 @@
 				CC11E59A29AD3A300000DDE8 /* TodoApp.xcdatamodeld in Sources */,
 				CC0118EB29AE7D57002C64DA /* TasksDataService.swift in Sources */,
 				CC0118F729AEDB68002C64DA /* SignUpViewController.swift in Sources */,
+				CCEC73E629B1A23500F16BF1 /* SignUpValidationViewModel.swift in Sources */,
 				CCEF93EB29AD83C9005B32E6 /* TaskViewModel.swift in Sources */,
 				CC0118FD29AEE6BC002C64DA /* LoginService.swift in Sources */,
 			);

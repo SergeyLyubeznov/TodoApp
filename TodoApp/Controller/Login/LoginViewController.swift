@@ -12,10 +12,12 @@ class LoginViewController: BaseViewController {
 
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var loginButton: UIButton!
     
     var coordintator: ((LoginCoordinator.Destination) -> Void)?
     
     private var viewModel: LoginViewModel?
+    private var validationViewModel = LoginValidationViewModel()
     private var cancellableSet: Set<AnyCancellable> = []
     lazy private var activityView = {ActivityIndicatorView.instantiate()}()
     
@@ -23,6 +25,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
 
         setupSiblings()
+        setupValidationSiblings()
         setupActivityIndicator()
     }
     
@@ -41,7 +44,6 @@ class LoginViewController: BaseViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction private func loginButtonPressed() {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -51,10 +53,29 @@ class LoginViewController: BaseViewController {
     @IBAction private func closeButtonPressed() {
         coordintator?(.close)
     }
+}
+
+// MARK: - Combine
+extension LoginViewController {
     
-    // MARK: - Combine
+    private func setupValidationSiblings() {
+        
+        emailTextField.textPublisher
+            .assign(to: \.email, on: validationViewModel)
+            .store(in: &cancellableSet)
+        
+        passwordTextField.textPublisher
+            .assign(to: \.password, on: validationViewModel)
+            .store(in: &cancellableSet)
+        
+        validationViewModel.$isValid
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isEnabled, on: loginButton)
+            .store(in: &cancellableSet)
+    }
     
     private func setupSiblings() {
+        
         viewModel?.$success
             .sink { [weak self] state in
                 if state {
