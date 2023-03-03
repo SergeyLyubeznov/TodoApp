@@ -46,9 +46,9 @@ class SignUpViewController: BaseViewController {
     
     // MARK: - Actions
     @IBAction private func signUpButtonPressed() {
-        let email = validationViewModel.email//emailTextField.text ?? ""
-        let password = validationViewModel.password//passwordTextField.text ?? ""
-        let confirmPassword = validationViewModel.confirmPassword//.text ?? ""
+        let email = validationViewModel.email
+        let password = validationViewModel.password
+        let confirmPassword = validationViewModel.confirmPassword
         viewModel?.signUp(email: email, password: password, confirmPassword: confirmPassword)
     }
     

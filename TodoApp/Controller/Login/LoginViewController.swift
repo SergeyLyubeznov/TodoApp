@@ -45,8 +45,8 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Actions
     @IBAction private func loginButtonPressed() {
-        let email = emailTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
+        let email = validationViewModel.email
+        let password = validationViewModel.password
         viewModel?.login(email: email, password: password)
     }
     
