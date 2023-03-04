@@ -61,6 +61,7 @@
 		CCEF93F229AD8CAB005B32E6 /* UIColor + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF93F129AD8CAB005B32E6 /* UIColor + Utils.swift */; };
 		CCEF93F529AD947A005B32E6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF93F429AD947A005B32E6 /* BaseNavigationController.swift */; };
 		CCEF93F729AD963F005B32E6 /* String + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF93F629AD963F005B32E6 /* String + Utils.swift */; };
+		CCF3639929B3909E00B431DE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3639829B3909E00B431DE /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		CCEF93F129AD8CAB005B32E6 /* UIColor + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Utils.swift"; sourceTree = "<group>"; };
 		CCEF93F429AD947A005B32E6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		CCEF93F629AD963F005B32E6 /* String + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Utils.swift"; sourceTree = "<group>"; };
+		CCF3639829B3909E00B431DE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +373,7 @@
 		CC11E5C429AD3AA80000DDE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCF3639729B3908F00B431DE /* Shadow */,
 				CCEF93E329AD8243005B32E6 /* ActivityIndicator */,
 			);
 			path = View;
@@ -494,6 +497,14 @@
 				CCEF93F429AD947A005B32E6 /* BaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CCF3639729B3908F00B431DE /* Shadow */ = {
+			isa = PBXGroup;
+			children = (
+				CCF3639829B3909E00B431DE /* ShadowView.swift */,
+			);
+			path = Shadow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,6 +699,7 @@
 				CC11E5C829AD3BB70000DDE8 /* TasksViewController.swift in Sources */,
 				CC11E5D029AD43370000DDE8 /* Constants.swift in Sources */,
 				CC01191029AF017F002C64DA /* LoginRequest.swift in Sources */,
+				CCF3639929B3909E00B431DE /* ShadowView.swift in Sources */,
 				CC01191929AFBD73002C64DA /* TokenService.swift in Sources */,
 				CC11E59029AD3A300000DDE8 /* AppDelegate.swift in Sources */,
 				CCAF374629AD53B50077EEB4 /* TasksService.swift in Sources */,
@@ -880,12 +892,13 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = home.TodoApp.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -907,12 +920,13 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = home.TodoApp.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

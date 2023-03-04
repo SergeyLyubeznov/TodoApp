@@ -102,12 +102,24 @@ extension TasksViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension TasksViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
-                   forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            if let item = viewModel?.tasks[indexPath.row] {
-                viewModel?.deleteTaskById(item.id)
+
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .normal, title: nil) { (_, _, _) in
+            if let item = self.viewModel?.tasks[indexPath.row] {
+                self.viewModel?.deleteTaskById(item.id)
             }
         }
+        
+        deleteAction.image = .init(named: "trash_icon")
+        deleteAction.backgroundColor = .init(hex: "FBFBFB")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(#function)
     }
 }
