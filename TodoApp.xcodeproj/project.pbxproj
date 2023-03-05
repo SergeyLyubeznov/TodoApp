@@ -43,6 +43,9 @@
 		CC11E5D029AD43370000DDE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5CD29AD43370000DDE8 /* Constants.swift */; };
 		CC11E5D129AD43370000DDE8 /* UIVIewController + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5CF29AD43370000DDE8 /* UIVIewController + Utils.swift */; };
 		CC11E5D329AD43A10000DDE8 /* UITableView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5D229AD43A10000DDE8 /* UITableView + Utils.swift */; };
+		CC8422DC29B4E03000433637 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8422DB29B4E03000433637 /* TabBarController.swift */; };
+		CC8422E129B4EC7B00433637 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8422E029B4EC7B00433637 /* ProfileViewController.swift */; };
+		CC8422E329B4ED4700433637 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8422E229B4ED4700433637 /* Profile.storyboard */; };
 		CCAF373929AD4FF40077EEB4 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF373729AD4FF40077EEB4 /* TaskTableViewCell.swift */; };
 		CCAF373A29AD4FF40077EEB4 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAF373829AD4FF40077EEB4 /* TaskTableViewCell.xib */; };
 		CCAF374229AD53A20077EEB4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF373E29AD53A20077EEB4 /* NetworkService.swift */; };
@@ -122,6 +125,9 @@
 		CC11E5CD29AD43370000DDE8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC11E5CF29AD43370000DDE8 /* UIVIewController + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIewController + Utils.swift"; sourceTree = "<group>"; };
 		CC11E5D229AD43A10000DDE8 /* UITableView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Utils.swift"; sourceTree = "<group>"; };
+		CC8422DB29B4E03000433637 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CC8422E029B4EC7B00433637 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CC8422E229B4ED4700433637 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CCAF373729AD4FF40077EEB4 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		CCAF373829AD4FF40077EEB4 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		CCAF373E29AD53A20077EEB4 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -352,6 +358,8 @@
 		CC11E5C229AD3A970000DDE8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC8422DF29B4EC6400433637 /* Profile */,
+				CC8422DA29B4E02100433637 /* TabBar */,
 				CC01191A29AFEC43002C64DA /* Tasks */,
 				CC0118EF29AED226002C64DA /* Login */,
 			);
@@ -414,6 +422,23 @@
 				CC11E5CF29AD43370000DDE8 /* UIVIewController + Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CC8422DA29B4E02100433637 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC8422DB29B4E03000433637 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CC8422DF29B4EC6400433637 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC8422E029B4EC7B00433637 /* ProfileViewController.swift */,
+				CC8422E229B4ED4700433637 /* Profile.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		CCAF373B29AD53A20077EEB4 /* Service */ = {
@@ -617,6 +642,7 @@
 				CCAF373A29AD4FF40077EEB4 /* TaskTableViewCell.xib in Resources */,
 				CC11E59F29AD3A320000DDE8 /* LaunchScreen.storyboard in Resources */,
 				CC11E59C29AD3A320000DDE8 /* Assets.xcassets in Resources */,
+				CC8422E329B4ED4700433637 /* Profile.storyboard in Resources */,
 				CC11E59729AD3A300000DDE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,6 +695,7 @@
 				CCEC73E229B19F5500F16BF1 /* UITextField + Utils.swift in Sources */,
 				CC01190929AEE958002C64DA /* UserAPI.swift in Sources */,
 				CCEF93F729AD963F005B32E6 /* String + Utils.swift in Sources */,
+				CC8422E129B4EC7B00433637 /* ProfileViewController.swift in Sources */,
 				CC01190429AEE89C002C64DA /* AuthResponse.swift in Sources */,
 				CC01190729AEE90E002C64DA /* User.swift in Sources */,
 				CCAF374329AD53A20077EEB4 /* ApiRequest.swift in Sources */,
@@ -687,6 +714,7 @@
 				CCEF93E729AD8243005B32E6 /* ActivityIndicatorView.swift in Sources */,
 				CC01191F29AFF40B002C64DA /* LoginCoordinator.swift in Sources */,
 				CC0118F529AED7DE002C64DA /* LoginViewController.swift in Sources */,
+				CC8422DC29B4E03000433637 /* TabBarController.swift in Sources */,
 				CC01190029AEE750002C64DA /* SignUpRequest.swift in Sources */,
 				CC01190C29AEE99B002C64DA /* AuthResponseAPI.swift in Sources */,
 				CCAF373929AD4FF40077EEB4 /* TaskTableViewCell.swift in Sources */,

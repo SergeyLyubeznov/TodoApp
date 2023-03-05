@@ -16,6 +16,7 @@ protocol TasksDataServiceProtocol {
 }
 
 class TasksDataService: TasksDataServiceProtocol {
+    
     private let coreData = CoreDataService.shared
     
     func getTasks() -> [Task] {

@@ -79,10 +79,6 @@ class TasksViewController: BaseViewController, Storyboarded {
     @IBAction func addButtonPressed() {
         viewModel?.addTask()
     }
-    
-    @IBAction func logoutButtonPressed() {
-        coordintator?(.logout)
-    }
 }
 
 // MARK: - UITableViewDataSource

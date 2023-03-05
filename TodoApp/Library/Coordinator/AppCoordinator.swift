@@ -27,10 +27,12 @@ class AppCoordinator {
     let window: UIWindow
     private var coordinators: [any Coordinator] = []
     private let tokenService: TokenService
+    private let tasksService: TasksDataService
     private let controller: UINavigationController
     
     private init() {
         tokenService = TokenKeychanService()
+        tasksService = TasksDataService()
         window = UIWindow()
         self.controller = BaseNavigationController()
         window.rootViewController = controller
@@ -78,6 +80,7 @@ extension AppCoordinator: Coordinator {
         coordinator.coordinatorClose = {[weak self] in
             guard let self = self else {return}
             self.tokenService.delete()
+            self.tasksService.removeAllTasks()
             self.coordinators.removeAll()
             self.controller.viewControllers.removeAll()
             self.start()

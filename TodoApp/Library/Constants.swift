@@ -23,6 +23,9 @@ struct Constants {
         static let TaskHightPriority = "C92E27"
         static let TaskMidPriority = "515283"
         static let TaskLowPriority = "51877F"
+        
+        // MARK: - TabBar
+        static let TabBarTintColor = "8A817C"
     }
     
     // MARK: - Storyboard
@@ -35,5 +38,21 @@ struct Constants {
     struct Valid {
         static let PasswordLenght = 8
         static let EmailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    }
+    
+    // MARK: - TabBar
+    struct TabBarTitle {
+        static let Tasks = "Tasks"
+        static let Profile = "Profile"
+    }
+    
+    struct TabBarIcon {
+        static let Tasks = "tab_tasks_icon"
+        static let Profile = "tab_profile_icon"
+    }
+    
+    struct TabBarSelectedIcon {
+        static let Tasks = "tab_tasks_selected_icon"
+        static let Profile = "tab_profile_selected_icon"
     }
 }
