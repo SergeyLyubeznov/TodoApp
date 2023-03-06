@@ -4,5 +4,6 @@
         <attribute name="body" attributeType="String"/>
         <attribute name="id" attributeType="String"/>
         <attribute name="priority" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
     </entity>
 </model>

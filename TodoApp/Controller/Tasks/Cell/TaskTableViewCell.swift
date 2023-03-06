@@ -31,7 +31,7 @@ class TaskTableViewCell: UITableViewCell {
     
     func configure(task: TaskViewModel) {
         self.descriptionLabel.text = task.description
-        self.titleLabel.text = task.id
+        self.titleLabel.text = task.title
         self.categoryLabel.text = task.category
         self.priorityView.backgroundColor = task.color
         self.dateLabel.text = task.date

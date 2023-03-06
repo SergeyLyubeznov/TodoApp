@@ -75,7 +75,8 @@ class TasksViewModel: ViewModel {
         taskModels = dataService.getTasks()
         tasks = taskModels.map({task in
             let color = TaskPriority(rawValue: task.priority)?.color ?? .black
-            return TaskViewModel(id: task.id, description: task.description, color: color)
+            return TaskViewModel(id: task.id, title: task.title,
+                                 description: task.description, color: color)
             
         })
         self.success = true
@@ -101,10 +102,14 @@ class TasksViewModel: ViewModel {
     }
     
     func addTask() {
-        let rand = Int.random(in: 10..<50)
+        
+        let titleRand = Int.random(in: 10..<50)
+        let descrRand = Int.random(in: 10..<100)
         let priority = TaskPriority[Int.random(in: 0..<3)]
-        let description = String.randomStringWithLength(rand)
-        let task = Task(id: "", description: description, priority: priority.rawValue)
+        let title = String.randomStringWithLength(titleRand)
+        let description = String.randomStringWithLength(descrRand)
+        let task = Task(id: "", title: title, description: description,
+                        priority: priority.rawValue)
         
         updateActivityIndicator(state: true)
         DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 0.5) {

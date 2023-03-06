@@ -10,6 +10,7 @@ import UIKit
 
 struct TaskViewModel {
     let id: String
+    let title: String
     let description: String
     let color: UIColor
     let category = "Base"
