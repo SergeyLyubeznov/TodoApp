@@ -43,6 +43,9 @@
 		CC11E5D029AD43370000DDE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5CD29AD43370000DDE8 /* Constants.swift */; };
 		CC11E5D129AD43370000DDE8 /* UIVIewController + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5CF29AD43370000DDE8 /* UIVIewController + Utils.swift */; };
 		CC11E5D329AD43A10000DDE8 /* UITableView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E5D229AD43A10000DDE8 /* UITableView + Utils.swift */; };
+		CC18360529B7ADCC00EC1454 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18360429B7ADCC00EC1454 /* UserEntity.swift */; };
+		CC18360829B7AEC300EC1454 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18360729B7AEC300EC1454 /* UserDataService.swift */; };
+		CC18360B29B7B8C600EC1454 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18360A29B7B8C600EC1454 /* ProfileViewModel.swift */; };
 		CC8422DC29B4E03000433637 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8422DB29B4E03000433637 /* TabBarController.swift */; };
 		CC8422E129B4EC7B00433637 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8422E029B4EC7B00433637 /* ProfileViewController.swift */; };
 		CC8422E329B4ED4700433637 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8422E229B4ED4700433637 /* Profile.storyboard */; };
@@ -125,6 +128,9 @@
 		CC11E5CD29AD43370000DDE8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC11E5CF29AD43370000DDE8 /* UIVIewController + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIewController + Utils.swift"; sourceTree = "<group>"; };
 		CC11E5D229AD43A10000DDE8 /* UITableView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Utils.swift"; sourceTree = "<group>"; };
+		CC18360429B7ADCC00EC1454 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		CC18360729B7AEC300EC1454 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		CC18360A29B7B8C600EC1454 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CC8422DB29B4E03000433637 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CC8422E029B4EC7B00433637 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC8422E229B4ED4700433637 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0118ED29AE7E4C002C64DA /* TaskEntity.swift */,
+				CC18360429B7ADCC00EC1454 /* UserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -424,6 +431,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CC18360629B7AEB200EC1454 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CC18360729B7AEC300EC1454 /* UserDataService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		CC18360929B7B8A700EC1454 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC18360A29B7B8C600EC1454 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		CC8422DA29B4E02100433637 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +467,7 @@
 		CCAF373B29AD53A20077EEB4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CC18360629B7AEB200EC1454 /* User */,
 				CC01191729AFBD60002C64DA /* Tasks */,
 				CC01191629AFBD58002C64DA /* Token */,
 				CC0118FB29AEE6AD002C64DA /* Auth */,
@@ -479,6 +503,7 @@
 		CCEF93E029AD7BCE005B32E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CC18360929B7B8A700EC1454 /* Profile */,
 				CCEC73DE29B1941A00F16BF1 /* SignUp */,
 				CC0118F829AEE659002C64DA /* Login */,
 				CCEF93E129AD7BE0005B32E6 /* TasksViewModel.swift */,
@@ -705,8 +730,10 @@
 				CCEF93E229AD7BE0005B32E6 /* TasksViewModel.swift in Sources */,
 				CC0118FA29AEE665002C64DA /* LoginViewModel.swift in Sources */,
 				CC01192529B012EE002C64DA /* BaseViewController.swift in Sources */,
+				CC18360829B7AEC300EC1454 /* UserDataService.swift in Sources */,
 				CC01191D29AFED19002C64DA /* AppCoordinator.swift in Sources */,
 				CCEC73E429B1A16D00F16BF1 /* LoginValidationViewModel.swift in Sources */,
+				CC18360529B7ADCC00EC1454 /* UserEntity.swift in Sources */,
 				CC0118E929AE7CB0002C64DA /* CoreDataService.swift in Sources */,
 				CC0118F129AED35A002C64DA /* WelcomeViewController.swift in Sources */,
 				CCEF93F529AD947A005B32E6 /* BaseNavigationController.swift in Sources */,
@@ -717,6 +744,7 @@
 				CC8422DC29B4E03000433637 /* TabBarController.swift in Sources */,
 				CC01190029AEE750002C64DA /* SignUpRequest.swift in Sources */,
 				CC01190C29AEE99B002C64DA /* AuthResponseAPI.swift in Sources */,
+				CC18360B29B7B8C600EC1454 /* ProfileViewModel.swift in Sources */,
 				CCAF373929AD4FF40077EEB4 /* TaskTableViewCell.swift in Sources */,
 				CC01191229AF01E7002C64DA /* LoginRequestAPI.swift in Sources */,
 				CC11E5D329AD43A10000DDE8 /* UITableView + Utils.swift in Sources */,

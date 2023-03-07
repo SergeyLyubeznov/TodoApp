@@ -8,6 +8,10 @@
 import Foundation
 import CoreData
 
+protocol BaseDataService {
+    func removeAll()
+}
+
 class CoreDataService {
     static let shared = CoreDataService()
     
@@ -57,6 +61,32 @@ class CoreDataService {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+}
+
+// MARK: - Remove all
+
+extension CoreDataService: BaseDataService {
+    
+    func removeAll() {
+        let entities = self.persistentContainer.managedObjectModel.entities
+        entities.compactMap({ $0.name }).forEach(removeEntity)
+    }
+    
+    private func removeEntity(_ entity: String) {
+        
+        let context = persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
 }

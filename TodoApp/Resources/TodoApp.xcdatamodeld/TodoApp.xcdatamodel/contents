@@ -6,4 +6,10 @@
         <attribute name="priority" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
     </entity>
+    <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
+        <attribute name="email" attributeType="String"/>
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+    </entity>
 </model>

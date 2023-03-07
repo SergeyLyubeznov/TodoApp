@@ -15,10 +15,12 @@ class LoginViewModel: ViewModel {
     
     private let networkService: LoginService
     private let tokenService: TokenService
+    private let userService: UserDataServiceProtocol
     
     init(networkService: LoginService) {
         self.networkService = networkService
         self.tokenService = TokenKeychanService()
+        self.userService = UserDataService()
     }
     
     func login(email: String, password: String) {
@@ -39,6 +41,7 @@ class LoginViewModel: ViewModel {
         do {
             let response = try response.get()
             self.tokenService.save(accessToken: response.token)
+            self.userService.setUser(response.user)
             DispatchQueue.main.async {
                 self.success = true
             }

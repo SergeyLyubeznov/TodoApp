@@ -10,4 +10,10 @@ import Foundation
 struct User {
     let id: String
     let email: String
+    let firstName: String
+    let lastName: String
+    
+    func fullName() -> String {
+        return "\(firstName) \(lastName)"
+    }
 }
