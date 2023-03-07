@@ -66,7 +66,38 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nid-7U-o0l">
                                         <rect key="frame" x="0.0" y="44" width="393" height="695"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_image" translatesAutoresizingMaskIntoConstraints="NO" id="exM-a6-Vf8">
+                                                <rect key="frame" x="146.66666666666666" y="8" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="3gk-a5-5uy"/>
+                                                    <constraint firstAttribute="width" constant="100" id="gkd-70-GhP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVx-zo-NDw">
+                                                <rect key="frame" x="0.0" y="116" width="393" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLW-lh-Wdo">
+                                                <rect key="frame" x="0.0" y="144.33333333333331" width="393" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bLW-lh-Wdo" firstAttribute="leading" secondItem="nid-7U-o0l" secondAttribute="leading" id="4QP-PE-iru"/>
+                                            <constraint firstItem="exM-a6-Vf8" firstAttribute="centerX" secondItem="nid-7U-o0l" secondAttribute="centerX" id="XJF-Gi-1u6"/>
+                                            <constraint firstAttribute="trailing" secondItem="cVx-zo-NDw" secondAttribute="trailing" id="adP-k9-YuZ"/>
+                                            <constraint firstItem="cVx-zo-NDw" firstAttribute="top" secondItem="exM-a6-Vf8" secondAttribute="bottom" constant="8" symbolic="YES" id="gaA-UK-Svi"/>
+                                            <constraint firstItem="exM-a6-Vf8" firstAttribute="top" secondItem="nid-7U-o0l" secondAttribute="top" constant="8" id="tPc-SM-vvy"/>
+                                            <constraint firstItem="bLW-lh-Wdo" firstAttribute="top" secondItem="cVx-zo-NDw" secondAttribute="bottom" constant="8" id="wNa-M2-lzH"/>
+                                            <constraint firstItem="cVx-zo-NDw" firstAttribute="leading" secondItem="nid-7U-o0l" secondAttribute="leading" id="wQD-lx-n00"/>
+                                            <constraint firstAttribute="trailing" secondItem="bLW-lh-Wdo" secondAttribute="trailing" id="ydE-sq-Hk2"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -80,6 +111,10 @@
                             <constraint firstItem="gdY-ry-CXo" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="zqb-go-aMG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="cVx-zo-NDw" id="Mz5-1m-hs4"/>
+                        <outlet property="nameLabel" destination="bLW-lh-Wdo" id="qKa-r1-7g0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +122,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cat_image" width="90" height="90"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
