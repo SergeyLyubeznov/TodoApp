@@ -56,6 +56,7 @@
 		CCAF374429AD53A20077EEB4 /* ApiRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374029AD53A20077EEB4 /* ApiRoute.swift */; };
 		CCAF374629AD53B50077EEB4 /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374529AD53B50077EEB4 /* TasksService.swift */; };
 		CCAF374A29AD54800077EEB4 /* TaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF374929AD54800077EEB4 /* TaskAPI.swift */; };
+		CCE55C3129BA891A000FE836 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE55C3029BA891A000FE836 /* AddTaskViewController.swift */; };
 		CCEC73E229B19F5500F16BF1 /* UITextField + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E129B19F5500F16BF1 /* UITextField + Utils.swift */; };
 		CCEC73E429B1A16D00F16BF1 /* LoginValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E329B1A16D00F16BF1 /* LoginValidationViewModel.swift */; };
 		CCEC73E629B1A23500F16BF1 /* SignUpValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC73E529B1A23500F16BF1 /* SignUpValidationViewModel.swift */; };
@@ -141,6 +142,7 @@
 		CCAF374029AD53A20077EEB4 /* ApiRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRoute.swift; sourceTree = "<group>"; };
 		CCAF374529AD53B50077EEB4 /* TasksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
 		CCAF374929AD54800077EEB4 /* TaskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAPI.swift; sourceTree = "<group>"; };
+		CCE55C3029BA891A000FE836 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		CCEC73E129B19F5500F16BF1 /* UITextField + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + Utils.swift"; sourceTree = "<group>"; };
 		CCEC73E329B1A16D00F16BF1 /* LoginValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationViewModel.swift; sourceTree = "<group>"; };
 		CCEC73E529B1A23500F16BF1 /* SignUpValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpValidationViewModel.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		CC01191A29AFEC43002C64DA /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				CCE55C2D29BA8902000FE836 /* Add */,
 				CC11E59529AD3A300000DDE8 /* Main.storyboard */,
 				CC11E5C929AD42E70000DDE8 /* Cell */,
 				CC11E5C729AD3BB70000DDE8 /* TasksViewController.swift */,
@@ -482,6 +485,14 @@
 				CCAF374929AD54800077EEB4 /* TaskAPI.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		CCE55C2D29BA8902000FE836 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				CCE55C3029BA891A000FE836 /* AddTaskViewController.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		CCEC73DE29B1941A00F16BF1 /* SignUp */ = {
@@ -739,6 +750,7 @@
 				CCEF93F529AD947A005B32E6 /* BaseNavigationController.swift in Sources */,
 				CC11E5C629AD3B6E0000DDE8 /* Task.swift in Sources */,
 				CCEF93E729AD8243005B32E6 /* ActivityIndicatorView.swift in Sources */,
+				CCE55C3129BA891A000FE836 /* AddTaskViewController.swift in Sources */,
 				CC01191F29AFF40B002C64DA /* LoginCoordinator.swift in Sources */,
 				CC0118F529AED7DE002C64DA /* LoginViewController.swift in Sources */,
 				CC8422DC29B4E03000433637 /* TabBarController.swift in Sources */,

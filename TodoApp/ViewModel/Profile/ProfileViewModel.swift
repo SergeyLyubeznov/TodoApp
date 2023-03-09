@@ -12,7 +12,7 @@ class ProfileViewModel {
     @Published var name = ""
     @Published var email = ""
     
-    private let dataService:UserDataServiceProtocol
+    private let dataService: UserDataServiceProtocol
     
     init() {
         dataService = UserDataService()

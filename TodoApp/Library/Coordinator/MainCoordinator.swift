@@ -54,6 +54,9 @@ extension MainCoordinator {
         case .tasks:
             let controller = TasksViewController.instantiate()
             let viewModel = TasksViewModel(networkService: TasksNetworkService(accessToken: token))
+            controller.coordintator = { [weak self] destination in
+                self?.show(destination)
+            }
             controller.setViewModel(viewModel)
             return controller
         case .profile:
@@ -64,6 +67,12 @@ extension MainCoordinator {
             return controller
         }
     }
+    
+    private func showAddTaskViewControllerAt(_ viewModel: TasksViewModel) {
+        let controller = AddTaskViewController.instantiate()
+        controller.setViewModel(viewModel)
+        self.navigationController.present(controller, animated: true)
+    }
 }
 
 extension MainCoordinator: Coordinator {
@@ -71,6 +80,7 @@ extension MainCoordinator: Coordinator {
     enum Destination {
         case back
         case logout
+        case addTask(TasksViewModel)
     }
     
     func show(_ destination: Destination) {
@@ -79,6 +89,8 @@ extension MainCoordinator: Coordinator {
             navigationController.popViewController(animated: true)
         case .logout:
             coordinatorClose?()
+        case .addTask(let viewModel):
+            showAddTaskViewControllerAt(viewModel)
         }
     }
 }

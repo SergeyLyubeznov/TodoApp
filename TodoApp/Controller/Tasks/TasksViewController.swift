@@ -77,7 +77,9 @@ class TasksViewController: BaseViewController, Storyboarded {
     
     // MARK: - Actions
     @IBAction func addButtonPressed() {
-        viewModel?.addTask()
+        if let viewModel = viewModel {
+            coordintator?(.addTask(viewModel))
+        }
     }
 }
 
