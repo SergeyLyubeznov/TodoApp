@@ -101,13 +101,13 @@ class TasksViewModel: ViewModel {
         }
     }
     
-    func addTask() {
+    func addTask(_ title: String, _ description: String) {
         
         let titleRand = Int.random(in: 10..<50)
         let descrRand = Int.random(in: 10..<100)
         let priority = TaskPriority[Int.random(in: 0..<3)]
-        let title = String.randomStringWithLength(titleRand)
-        let description = String.randomStringWithLength(descrRand)
+        let title = title.isEmpty ? String.randomStringWithLength(titleRand) : title
+        let description = description.isEmpty ? String.randomStringWithLength(descrRand) : description
         let task = Task(id: "", title: title, description: description,
                         priority: priority.rawValue)
         
